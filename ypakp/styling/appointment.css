@@ -1,0 +1,64 @@
+.breadcrumb{
+    margin-left:40px;
+}
+
+.breadcrumb-item{
+    color: darkcyan;
+}
+
+.path{
+    height: 50px;
+}
+
+.appointment{
+    background-color: grey;
+    min-height: 100vh;
+}
+
+body {
+    background: grey;
+     /* color: #fff;   */
+}
+ 
+section:first-of-type {
+    /* background: linear-gradient(to right, #5d4157, #a8caba); */
+    background: grey;
+} 
+
+
+section:not(:first-of-type) {
+    min-height: 100vh;
+    border-top: none;
+}
+
+
+section:nth-of-type(2) {
+
+    background-image:url("../imgs/appointment2.png");
+    background-size:cover;
+    background-position:center;
+    /* background-opacity: 0.4; */
+
+    /* background: red; */
+}
+
+section:nth-of-type(3) {
+    background-color: #DFF1F6;
+    
+}
+
+section:nth-of-type(4) {
+    background: #0d1012;
+}
+
+section:nth-of-type(5) {
+    background: #090c0d;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #f2709c;
+}
+
+.col3{
+    margin-top:25px;
+}
