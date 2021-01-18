@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start();
+?>
+
 <!DOCTYPE html> 
 <html lang="en">
 
@@ -109,7 +114,7 @@
                 </ul>
 
                 <form class="d-flex">
-                  <a class="button btn btn-lg btn-outline-dark" id="register" href="../routes/login2.php" > <i class="fas fa-user"></i>Είσοδος</a>
+                  <a class="button btn btn-lg btn-outline-dark" id="register" href="../routes/login.php" > <i class="fas fa-user"></i>Είσοδος</a>
                   <a class="button btn btn-lg btn-outline-dark" id="register" href="../routes/signUp.php" > <i class="fas fa-user-plus"></i>Εγγραφή</a>
                 </form>
               </div>
@@ -153,5 +158,221 @@
         </nav>
       </div>
 
+      <link rel="stylesheet" href="../styling/login.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet"> -->
 
+
+
+<!-- <div class="container-fluid" style="height:800px; width:auto;"> -->
+<!-- <div> -->
+    <div class="row m-0 h-100" style="margin-top: 100px; margin-bottom:100px;">
+        <div class="col p-0 text-center d-flex justify-content-center align-items-center display-none">
+            <img src="../imgs/login.svg" class="w-100">
+        </div>
+        <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
+            <form class="w-75" action="" method="POST">
+                
+                <div class="mb-3">
+
+                    <!-- Username: <input type="text" name="user"><br />   -->
+<!-- Password: <input type="password" name="pass"><br />    -->
+
+
+                    <label for="exampleFormControlInput1" class="form-label fs-4" ><b>΄Ονομα Χρήστη</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="user" placeholder="Username" required>
+                </div>
+                
+                <div class="mb-3">
+     
+                    <!-- Username: <input type="text" name="user"><br />   -->
+                    <!-- Password: <input type="password" name="pass"><br />    -->
+
+     
+                    <label for="exampleFormControlInput2" class="form-label fs-4" n><b>Κωδικός</b> </label>
+                    <input type="password" class="form-control" id="exampleFormControlInput2" name="pass" placeholder="Password" required>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"> Keep me logged in </label>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <!-- <input type="sumbit" name="submit" value='Login' class="btn btn-custom btn-lg btn-block mt-3">  -->
+                <button type="submit" name="submit" value="Login" class="btn btn-custom btn-lg btn-block mt-3">Σύνδεση</button>
+                <!-- <input type="submit" value="Login" name="submit">   -->
+
+
+                <div class="mb-3 topm">
+
+                    <label for="exampleFormControlInput3" class="form-label fs-3 ">Δεν έχεις Λογαριασμό; </label>
+                    <a class="btn btn-light btn-outline-dark btn-sm form-label fs-4 form-control exampleFormControlInput3" href="../routes/signUp.php" >Κάνε Εγγραφή </a>
+
+                </div>
+            </form>
+
+        </div>
+    </div>  
+<!-- </div> -->
+
+<script>
+    window.scrollTo(0, 500);
+</script>
+
+</body>
+<nav class="navbar navbar-expand-lg navbar-dark " id="footer">
+  <div class="container-fluid">
+      
+      <ul class="col-md-3">
+
+          <li class="nav-item border border-light border-end-0 border-start-0" id="infobottom">Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων</li>
+          
+          <li class="nav-item"><a href="#"><img class="resize" src="../imgs/logo.png" title="Υπουργείο Εργασίας & Κοινωνικών Υποθέσεων"></a></li>
+      
+      </ul>
+
+      <ul class=" col-md-3">
+          <li class="nav-item" id="infobottom2">Ελληνική Δημοκρατία - Υπουργείο Εργασίας και Κοινωνικών Υποθέσεων.</li>
+          <li class="nav-item" id="infobottom3"><a href="#" class="nav-link">Βοήθεια <i class="fas fa-question-circle"></i></a></li>
+      </ul>
+
+      <ul class=" col-md-3">
+          <a><img class="resize2" src="../imgs/european.webp" title="Flag of Europe"></a>
+          <img class="resize2" src="../imgs/greece.png" title="Flag of Greece">
+      </ul>
+
+  </div>
+</nav>
+
+
+
+<!-- This will be on footer soon -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+
+
+</html>
+
+<?php
+if(isset($_POST["submit"])){  
+  
+    if(!empty($_POST['user']) && !empty($_POST['pass'])) {  
+        $user=$_POST['user'];  
+        $pass=$_POST['pass'];  
+    
+    
+        $con = new mysqli('localhost','root','','ypakp');
+        if($con-> connect_errno){
+            echo "failed to connect to MySQL: ", $mysqli -> connect_errno;
+        }
+
+        // $con=mysql_connect('localhost','root','') or die(mysql_error());  
+
+        $con -> select_db('ypakp') or die("cannot select DB");  
+        // mysql_select_db('ypakp') or die("cannot select DB");  
+    
+        // $query=mysql_query("SELECT * FROM users WHERE username='".$user."' AND password='".$pass."'");  
+        $query = $con -> query("SELECT * FROM users WHERE username='".$user."' AND password='".$pass."'");  
+
+        // $numrows= $query ->_num_rows($query);  
         
+        if($query)
+        {
+            $row = mysqli_num_rows($query);
+
+            if ($row)
+            {
+                // echo('Number of row(s) in the table: '.$row);
+
+                $record = mysqli_fetch_assoc($query);
+                // echo $record['username'];
+                // echo ("Post user is named: ".$user);
+                // printf('Number of row(s) in the table: '.$row);
+            
+                $dbusername = $record['username'];  
+                $dbpassword = $record['password'];  
+                
+                if($user == $dbusername && $pass == $dbpassword)  {  
+                
+                    // mysqli_free_result($query);
+
+                    // echo "douleuei gamw..";
+                    // session_start();  
+
+                    // echo session_id();
+
+                    if(session_id() == '') {
+                        // echo"session isn't started";
+                    }
+                    
+                    $_SESSION['sess_user']=$user;  
+                                
+                    /* Redirect browser */  
+                    // header("Location: index.php");
+                    header("location:appointment.php");  
+                }  
+            }
+            
+            else {  
+
+                session_destroy();
+                echo '<script language="javascript">';
+                echo 'alert("Invalid username or password!")';
+                echo '</script>';
+                // echo "Invalid username or password!";  
+            } 
+            
+            mysqli_free_result($query);
+        }
+
+        // mysqli_close($con);
+
+
+//         $numrows = $query->num_rows;
+
+//         if($numrows!=0)  { 
+
+//             while($row= $con->fetch_assoc($query))  
+//             {  
+//             $dbusername = $row['username'];  
+//             $dbpassword = $row['password'];  
+//             }  
+        
+//             if($user == $dbusername && $pass == $dbpassword)  {  
+                
+//                 session_start();  
+//                 $_SESSION['sess_user']=$user;  
+            
+//                 /* Redirect browser */  
+//                 header("location:appointment.php");  
+//             }  
+            
+//         } 
+        
+//         else {  
+
+//             echo '<script language="javascript">';
+//             echo 'alert("Invalid username or password!")';
+//             echo '</script>';
+//             // echo "Invalid username or password!";  
+//         }  
+//     } 
+    
+//     else {  
+//         echo "All fields are required!";  
+    }  
+
+}  
+
+?> 
+
+
+
