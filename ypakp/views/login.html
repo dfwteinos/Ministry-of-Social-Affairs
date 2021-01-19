@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../styling/login.css">
+<!-- <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300i,400,700&display=swap" rel="stylesheet"> -->
+
+
+
+<!-- <div class="container-fluid" style="height:800px; width:auto;"> -->
+<!-- <div> -->
+    <div class="row m-0 h-100" style="margin-top: 100px; margin-bottom:100px;">
+        <div class="col p-0 text-center d-flex justify-content-center align-items-center display-none">
+            <img src="../imgs/login.svg" class="w-100">
+        </div>
+        <div class="col p-0 bg-custom d-flex justify-content-center align-items-center flex-column w-100">
+            <form class="w-75" action="" method="POST">
+                
+                <div class="mb-3">
+
+                    <!-- Username: <input type="text" name="user"><br />   -->
+<!-- Password: <input type="password" name="pass"><br />    -->
+
+
+                    <label for="exampleFormControlInput1" class="form-label fs-4" ><b>΄Ονομα Χρήστη</b></label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="user" placeholder="Username" required>
+                </div>
+                
+                <div class="mb-3">
+     
+                    <!-- Username: <input type="text" name="user"><br />   -->
+                    <!-- Password: <input type="password" name="pass"><br />    -->
+
+     
+                    <label for="exampleFormControlInput2" class="form-label fs-4" n><b>Κωδικός</b> </label>
+                    <input type="password" class="form-control" id="exampleFormControlInput2" name="pass" placeholder="Password" required>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <!-- <h2 style="color:white;">Λάθος Όνομα ή Κωδικός χρήστη.</h2> -->
+                            <!-- <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> -->
+                            <!-- <label class="form-check-label" for="flexCheckDefault"> -->
+                                
+                                <?php
+                                
+                                    if (isset($forgot)){
+                                        echo  '<h3 style="color:white; white-space: nowrap; margin-left: -25px; margin-top: 20px;"> <u>' . $forgot .'</u></h3>';
+                                    }
+                                    
+                                    else {
+
+                                        echo '<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">';
+                                        echo ' <label class="form-check-label" for="flexCheckDefault"> ';
+                                        echo "Keep me logged in";
+                                        echo '</label>';
+                                    }
+                                
+                                ?>
+                            <!-- </label> -->
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+                <!-- <input type="sumbit" name="submit" value='Login' class="btn btn-custom btn-lg btn-block mt-3">  -->
+                <button type="submit" name="submit" value="Login" class="btn btn-custom btn-lg btn-block mt-3">Σύνδεση</button>
+                <!-- <input type="submit" value="Login" name="submit">   -->
+
+
+                <div class="mb-3 topm">
+
+                    <label for="exampleFormControlInput3" class="form-label fs-3 ">Δεν έχεις Λογαριασμό; </label>
+                    <a class="btn btn-light btn-outline-dark btn-sm form-label fs-4 form-control exampleFormControlInput3" href="../routes/signUp.php" >Κάνε Εγγραφή </a>
+
+                </div>
+            </form>
+
+        </div>
+    </div>  
+<!-- </div> -->
+
+<script>
+    window.scrollTo(0, 500);
+</script>

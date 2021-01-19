@@ -28,8 +28,8 @@
                         </div>
 
                         <div class="col-md-6 text-right">
-                            <p class="font-weight-bold mb-1">Invoice #550</p>
-                            <p class="text-muted">Due to: 4 Dec, 2019</p>
+                            <p class="font-weight-bold mb-1">Επίσημη Βεβαίωση Ηλεκτρονικού Ραντεβού.</p>
+                            <p class="mb-1 text-muted">Υπο την αιγίδα του Υπουργείου Εργασίας και της Ελληνικής Δημοκρατίας.</p>
                         </div>
                     </div>
 
@@ -38,22 +38,36 @@
 
                     <div class="row pb-5 p-5">
                         <div class="col-md-6">
-                            <p class="font-weight-bold mb-4 fs-5"><?php echo $var;?></p>
-                            <p class="mb-1">
-                                <?php echo $var;?>
+                            <p class="font-weight-bold mb-4 fs-4"> <u> Προσωπικά Στοιχεία </u></p>
+                            <!-- <p class="mb-1">
+                                <?php echo $firstname. " " . $lastname;?>
+                            </p> -->
+                            <!-- <p class="mb-1"><span class="text-muted">Ονοματεπώνυμο: </span> <?php echo $lastname. " " . $firstname;?> </p> -->
+                            <p class="mb-1"><span class="text-muted">Επώνυμο: </span>         
+                                 <?php echo $lastname;?>
                             </p>
-                            <p>Acme Inc</p>
 
-                            <p class="mb-1">Berlin, Germany</p>
-                            <p class="mb-1">6781 45P</p>
+                            <p class="mb-1"><span class="text-muted">Όνομα: </span>         
+                                <?php echo $firstname;?>
+                            </p>
+
+                            <p class="mb-1"><span class="text-muted">Αριθμός Αστυνομικής Ταυτότητας: </span>         
+                                <?php echo $id;?>
+                            </p>
+
+
+                            <!-- <p>Acme Inc</p> -->
+
+                            <!-- <p class="mb-1">Berlin, Germany</p>
+                            <p class="mb-1">6781 45P</p> -->
                         </div>
 
                         <div class="col-md-6 text-right">
-                            <p class="font-weight-bold mb-4">Payment Details</p>
-                            <p class="mb-1"><span class="text-muted">VAT: </span> 1425782</p>
-                            <p class="mb-1"><span class="text-muted">VAT ID: </span> 10253642</p>
-                            <p class="mb-1"><span class="text-muted">Payment Type: </span> Root</p>
-                            <p class="mb-1"><span class="text-muted">Name: </span> John Doe</p>
+                            <p class="font-weight-bold mb-4 fs-4"> <u> Στοιχεία Επικοινωνίας </u> </p>
+                            <p class="mb-1"><span class="text-muted">Διεύθυνση: </span> <?php echo $address;?> </p>
+                            <p class="mb-1"><span class="text-muted">Ηλεκτρονική Διεύθυνση: </span> <?php echo $mail;?> </p>
+                            <p class="mb-1"><span class="text-muted">Τηλέφωνο Επικοινωνίας: </span> <?php echo $phonecall;?> </p>
+                            <!-- <p class="mb-1"><span class="text-muted">Name: </span> John Doe</p> -->
                         </div>
                     </div>
 
@@ -61,25 +75,25 @@
                         <div class="col-md-12">
                             <table class="table">
                                 <thead>
-                                    <tr>
-                                        <th class="border-0 text-uppercase small font-weight-bold">ID</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Item</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Description</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Quantity</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th>
-                                        <th class="border-0 text-uppercase small font-weight-bold">Total</th>
+                                    <tr2>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Ημερομηνία <span class="text-muted" > (Μήνας/Μέρα/Έτος)</span> </th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Ώρα συνάντησης</th>
+                                        <th class="border-0 text-uppercase small font-weight-bold">Επιλεγμένο Τμήμα</th>
+                                        <!-- <th class="border-0 text-uppercase small font-weight-bold">Quantity</th> -->
+                                        <!-- <th class="border-0 text-uppercase small font-weight-bold">Unit Cost</th> -->
+                                        <!-- <th class="border-0 text-uppercase small font-weight-bold">Total</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>1</td>
-                                        <td>Software</td>
-                                        <td>LTS Versions</td>
-                                        <td>21</td>
-                                        <td>$321</td>
-                                        <td>$3452</td>
+                                        <td>  <?php echo $date ;?>  </td>
+                                        <td> <?php echo $appt_time. " " . $timeflag ;?>  </td>
+                                        <td> <?php echo $department ;?>  </td>
+                                        <!-- <td>21</td> -->
+                                        <!-- <td>$321</td> -->
+                                        <!-- <td>$3452</td> -->
                                     </tr>
-                                    <tr>
+                                    <!-- <tr>
                                         <td>1</td>
                                         <td>Software</td>
                                         <td>Support</td>
@@ -94,7 +108,7 @@
                                         <td>4534</td>
                                         <td>$354</td>
                                         <td>$23434</td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -106,19 +120,19 @@
                     </div>
 
                     <div class="d-flex flex-row-reverse bg-dark text-white p-4 rounded-bottom">
-                        <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Grand Total</div>
-                            <div class="h2 font-weight-light">$234,234</div>
+                        <div class="py-3 px-5 text-right grey">
+                            <!-- <div class="mb-2">Grand Total</div> -->
+                            <!-- <div class="h2 font-weight-light">$234,234</div> -->
                         </div>
 
-                        <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Discount</div>
-                            <div class="h2 font-weight-light">10%</div>
+                        <div class="py-3 px-5 text-right grey">
+                            <!-- <div class="mb-2">Discount</div> -->
+                            <!-- <div class="h2 font-weight-light">10%</div> -->
                         </div>
 
-                        <div class="py-3 px-5 text-right">
-                            <div class="mb-2">Sub - Total amount</div>
-                            <div class="h2 font-weight-light">$32,432</div>
+                        <div class="py-3 px-5 text-right grey">
+                            <!-- <div class="mb-2">Sub - Total amount</div> -->
+                            <!-- <div class="h2 font-weight-light">$32,432</div> -->
                         </div>
                     </div>
                 </div>
@@ -126,6 +140,6 @@
         </div>
     </div>
     
-    <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank" href="http://totoprayogo.com">totoprayogo.com</a></div>
+    <!-- <div class="text-light mt-5 mb-5 text-center small">by : <a class="text-light" target="_blank" href="http://totoprayogo.com">totoprayogo.com</a></div> -->
 
 </div>
