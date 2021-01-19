@@ -1,8 +1,5 @@
 <?php
 
-$base_url = "http://". $_SERVER['HTTP_HOST'] . "/";
-echo $base_url;
-
 session_start();
 if(!isset($_SESSION["sess_user"])){  
     echo "we failed";

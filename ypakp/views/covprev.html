@@ -1,3 +1,136 @@
-<p>
-    OLA KALAAA
-</p>
+<link rel="stylesheet" href="../styling/breadcrumb.css">
+<link rel="stylesheet" href="../styling/covprev.css">
+
+<!-- Breadcrumb -->
+<nav class="navbar navbar-light bg-light path"> 
+    <div class="container-fluid">
+        <span class="navbar-text">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../routes/index.php">Αρχική Σελίδα</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">COVID-19: Κατευθυντήριες Οδηγίες</li>
+                </ol>
+            </nav>
+        </span>
+    </div>
+</nav>
+
+<!--First section-->
+<div class="section blue">
+  <div class="covidh">
+      <h2 class="fs-1 white" ><b> Coronavirus(COVID-19) </b></h2>
+      <hr class="white">
+      <h5 class="white"> 3 Βασικοί κανόνες που πρέπει να τηρούμε εν μέσω αυτής της πανδημίας:</h5>
+  </div>
+  <br>
+
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 white fs-1"><i class="fas fa-hands-wash icon_style"></i> Πλύσιμο Χεριών<br><p class="white fs-5">Πλύνετε τα χέρια σας συχνά και σχολαστικά.</p></div>
+      </div>
+      <div class="col-6">
+        <h1 class="p-3 white fs-1">Δείτε τις τελευταίες εξελίξεις σχετικά με τον νέο Κορωνοϊό</h1>
+      </div>
+      <div class="col-6">
+        <div class="p-3 white fs-1"><i class="fas fa-head-side-mask icon_style"></i> Χρήση Μάσκας<br><p class="white fs-5">Καθολική χρήση μάσκας.</p></div>
+      </div>
+      <div class="col-6 left">
+        <a class="btn btn-warning fs-3" href="https://www.google.com/aclk?sa=L&ai=DChcSEwjK5JS2lqPuAhXDmtUKHePYAQkYABAAGgJ3cw&ae=2&sig=AOD64_0Cz5Gd0KzINdtn2Oc2WFphw7DRLQ&q&adurl&ved=2ahUKEwjZ5462lqPuAhUDcBQKHT36BdsQ0Qx6BAgEEAE" role="button">Περισσότερα >></a>
+      </div>
+      <div class="col-6">
+        <div class="p-3 white fs-1"><i class="fas fa-people-arrows icon_style"></i> Τήρηση Αποστάσεων<br><p class="white fs-5">Τηρείτε τις απαιτούμενες αποστάσεις,τουλάχιστον 2 μέτρα.</p></div>
+      </div>
+      <div class="col-6 left2">
+        <a class="btn btn-outline-light scroll-link fs-3" href="#one">Οδηγίες για εργασιακό κοινό <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </div>
+</div>
+
+<!--Second section-->
+<section class="py-5 d-flex imgcon" id="one">
+    <!--div class="container py-5">
+        <div class="dropdown text-center">
+            <button class="btn btn-secondary dropdown-toggle msize hover" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            Εργασιακό Κοινό
+            </button>
+            <ul class="dropdown-menu msize dropsize" aria-labelledby="dropdownMenu2">
+                <li><a class="dropdown-item margtxt"href="#">Εργαζόμενοι</a></li>
+                <li><hr class="dropdown-divider margln"></li>
+                <li><a class="dropdown-item margtxt" href="#">Εργοδότες</a></li>
+                <li><hr class="dropdown-divider margln"></li>
+                <li><a class="dropdown-item margtxt" href="#">Άνεργοι</a></li>
+                <li><hr class="dropdown-divider margln"></li>
+                <li><a class="dropdown-item" href="#">Συνταξιούχοι</a></li>
+            </ul>
+        </div>
+  </div-->
+
+  <ul id="nav" class="nav msize">
+    <!--li class="touch-only"><a href="#nav">Close Subs</a></li-->
+    <li><button onclick="myFunction()" class="first">Εργασιακό Κοινό</button>
+      <ul id="open" class="next">
+        <li><a class="centerized" href="#">Εργαζόμενοι</a>
+          <!-- <ul>
+            <li><a href="#">Δημόσιοι Υπάλληλοι</a></li>
+            <li><a href="#">Ιδιωτικοί Υπάλληλοι</a></li>
+            <li><a href="#">Ελεύθεροι Επαγγελματίες</a></li>
+          </ul> -->
+        </li>
+        <li><a href="#">Εργοδότες</a></li>
+        <li><a href="#">Άνεργοι</a></li>
+        <li><a href="#">Συνταξιούχοι</a></li>
+      </ul>
+  </ul>
+
+  <!--div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div-->
+
+</section>
+
+<script type='text/javascript'>
+//  if ("ontouchstart" in document.documentElement) {
+//  	document.documentElement.className += " touch-device";
+//}
+
+function myFunction() {
+  document.getElementById("open").classList.toggle("show");
+}
+
+
+//function myFunction() {
+//  document.getElementById("myDropdown").classList.toggle("show");
+//}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.nav')) {
+    var dropdowns = document.getElementsByClassName("next");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+// Close the dropdown menu if the user clicks outside of it
+//window.onclick = function(event) {
+//  if (!event.target.matches('.dropbtn')) {
+//    var dropdowns = document.getElementsByClassName("dropdown-content");
+//    var i;
+//    for (i = 0; i < dropdowns.length; i++) {
+//      var openDropdown = dropdowns[i];
+//      if (openDropdown.classList.contains('show')) {
+//        openDropdown.classList.remove('show');
+//      }
+//    }
+//  }
+//}
+</script>
