@@ -1,0 +1,40 @@
+.now{
+    background-color: #00b3db;
+    pointer-events: none;
+}
+
+
+.hcenter{
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.color{
+    background-color: #084C61;
+    height:900px;
+}
+
+.card_style{
+    width: 28.5rem;
+    background-color: #084C61;
+    border-color: white;
+    margin-left: 20px;
+    color: white;
+    text-align: center;
+}
+
+.a_style{
+    border-color: white;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #00b3db;
+    border-color: #00b3db;
+}
+
+.fas_img{
+    font-size: 250px;
+}
