@@ -47,13 +47,18 @@
     z-index: initial;
 }
 
-.fa-user{
+.fa-user {
+    padding-right:10px;
+}
+
+.fa-user-edit{
     padding-right:10px;
 }
 
 .fa-user-plus{
     padding-right:13px;
 }
+
 
 #navmain{
     min-height: 150px;
@@ -68,6 +73,12 @@
     color: white;
     padding-right:20px;
     padding-left:20px;
+}
+
+.profile:hover{
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e;
 }
 
 #services:hover {
@@ -141,4 +152,10 @@ ul {
     width:200px;
     height:auto;
     margin-left: 2px;
+}
+
+.edit:hover{
+    color: #fff;
+    background-color: #00b3db;
+    border-color: #285e8e;   
 }

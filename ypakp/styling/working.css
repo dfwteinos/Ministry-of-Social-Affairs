@@ -12,16 +12,19 @@
 
 .color{
     background-color: #084C61;
-    height:900px;
+    height:1200px;
 }
 
 .card_style{
     width: 28.5rem;
     background-color: #084C61;
     border-color: white;
-    margin-left: 20px;
+    margin-left: 2px;
     color: white;
     text-align: center;
+    margin-right: 1px;
+    padding-left: -20px;
+    padding-right: -20px;
 }
 
 .a_style{

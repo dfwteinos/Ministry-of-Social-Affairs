@@ -1,5 +1,7 @@
 <?php       
 
+session_start();
+
 include('../views/header.html');
 
 //$var = $_SERVER['HTTP_REFERER'];

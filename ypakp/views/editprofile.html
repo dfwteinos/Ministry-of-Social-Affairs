@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="../styling/editprofile.css">
+<link rel="stylesheet" href="../styling/breadcrumb.css">
+
+
+<!-- Breadcrumb -->
+<nav class="navbar navbar-light bg-light path"> 
+    <div class="container-fluid">
+        <span class="navbar-text">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../routes/showprofile.php">Το Προφίλ μου</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Επεξεργασία προφίλ</li>
+                    <!-- <li class="breadcrumb-item active" aria-current="page">Επίσημη Δήλωση Ραντεβού</li>   -->
+                </ol>
+            </nav>
+        </span>
+    </div>
+</nav>
+
+
+<div class="container mt-5 mb-5">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-6">
+            <div class="card px-5 py-5" style="margin-left:50px;"> <span class="circle" style="margin-left:50px;"><i class="fa fa-check"></i></span>
+                <h5 class="mt-3" style="margin-left:50px;"> Επεξεργαστείτε εύκολα και γρήγορα <br> τον λογαριασμό σας! </h5> <small class="mt-2 text-muted" style="margin-bottom:30px; margin-left: 50px;">Με την νέα εισαγωγή της επεξεργασίας λογαριασμού, έχετε την δυνατότητα να τροποποιήσετε τα προσωπικά σας στοιχεία, σε περίπτωση αλλάγης επαγγέλματος, ή λοιπών προσωπικών στοιχείων.</small>
+                
+                <form class="w-75" action="" method="POST" style="margin-left: 50px;">
+
+                    <label for="email" class="form-label" ><b>Email</b> </label>
+                    <div class="form-input" id="email"> <i class="fa fa-envelope"></i> <input type="text" class="form-control black" placeholder="Email address" name="email" value='<?php echo $dbemail; ?>' style="text: white;"> </div>
+                    
+                    <label for="username" class="form-label" ><b>Όνομα Χρήστη</b> </label>
+                    <div class="form-input" id="username"> <i class="fa fa-user"></i> <input type="text" class="form-control black" placeholder="Username" name="username" value='<?php echo $dbuser; ?>' > </div>
+
+                    <label for="pass" class="form-label" ><b>Κωδικός</b> </label>
+                    <div class="form-input" id="pass"> <i class="fa fa-lock"></i> <input type="text" class="form-control black" placeholder="Password" name="password" value="<?php echo $dbpassword ?>"> </div>
+
+                    <label for="reg_select" style="margin-bottom: 3px;">Τύπος Εργασίας</label>
+                    <select class="form-select"  aria-label="Default select example" name="reg_select" style="margin-bottom:35px;" required>
+
+                        <option disabled selected><?php echo $dbusertype; ?></option>
+                        <option value="Εργαζόμενος">Εργαζόμενος</option>
+                        <option value="Εργοδότης">Εργοδότης</option>
+
+                    </select>
+
+                    <!-- <label for="pass" class="form-label" ><b>Όνομα</b> </label>
+                    <div class="form-input" id="pass"> <i class="fa fa-lock"></i> <input type="text" class="form-control black" placeholder="Όνομα"> </div>
+                
+                    <label for="pass" class="form-label" ><b>Επώνυμο</b> </label>
+                    <div class="form-input" id="pass"> <i class="fa fa-lock"></i> <input type="text" class="form-control black" placeholder="Επώνυμο"> </div> -->
+                    
+
+                    <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked> <label class="form-check-label" for="flexCheckChecked" > <b>Συμφωνώ με τους όρους και τις προϋποθέσεις</b> </label> </div> <button type="submit" name="submit" value="Login" class="btn btn-primary mt-4 signup fs-4"> Εφαρμογή αλλαγών</button>
+                    <!-- <div class="text-center mt-3"> <span>Or continue with these social profile</span> </div>
+                    <div class="d-flex justify-content-center mt-4"> <span class="social"><i class="fa fa-google"></i></span> <span class="social"><i class="fa fa-facebook"></i></span> <span class="social"><i class="fa fa-twitter"></i></span> <span class="social"><i class="fa fa-linkedin"></i></span> </div>
+                    <div class="text-center mt-4"> <span>Already a member?</span> <a href="#" class="text-decoration-none">Login</a> </div> -->
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.scrollTo(0,440);
+</script>

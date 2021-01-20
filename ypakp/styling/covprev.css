@@ -224,7 +224,14 @@ ul {
 .nav .touch-only{display:none;left :-10px}
 .touch-device .nav .touch-only{display:inline-block}
 .touch-device  .nav .touch-only a{background:#000;color:#fff;}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 6d3366cd97f9ec3113aa15cd091d655e94f8b527
+>>>>>>> 156f9db862c5d9816da0406e1452de3a844cf94b
 /* Dropdown Button */
 .dropbtn {
     background-color: #3498DB;
