@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="../styling/breadcrumb.css">
+<link rel="stylesheet" href="../styling/slideshow.css">
+<link rel="stylesheet" href="../styling/employer.css">
+<script type='text/javascript' src='//code.jquery.com/jquery-1.8.3.js'></script>
+
+<!-- Breadcrumb -->
+<nav class="navbar navbar-light bg-light path"> 
+    <div class="container-fluid">
+        <span class="navbar-text">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../routes/index.php">Αρχική Σελίδα</a></li>
+                    <li class="breadcrumb-item"><a href="../routes/working.php">Εργασιακά</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Είμαι Εργοδότης</li>
+                </ol>
+            </nav>
+        </span>
+    </div>
+</nav>
+
+<section class="blue">
+    <div class="d-md-flex h-md-100 align-items-center">
+
+        <!-- First Half -->
+        
+        <div class="col-md-6 p-0 bg-cyan h-md-100">
+            <div class="text-black h-100 p-5 text-center justify-content-center">
+                <h2><u>Συχνές Ερωτήσεις  <i class="fas fa-info-circle"></i></u></h2>
+                <br><br>
+                <p class="fs-4"><b class="fs-2 num-left">1.</b> Κείμενο1 <a class="fs-4" href="#">Δείτε εδώ</a></p>
+                <br><br>
+                <p class="fs-4"><b class="fs-2 num-left">2.</b> Κείμενο2 <a class="fs-4" href="#">Δείτε εδώ</a></p>
+                <br><br>
+                <p class="fs-4"><b class="fs-2 num-left">3.</b> Κείμενο3 <a class="fs-4" href="#">Δείτε εδώ</a></p>
+                <br><br>
+                <p class="fs-4"><b class="fs-2 num-left">4.</b> Κείμενο4 <a class="fs-4" href="#">Δείτε εδώ</a></p>
+                <br><br>
+                <p class="fs-4"><b class="fs-2 num-left">5.</b> Κείμενο5 <a class="fs-4" href="#">Δείτε εδώ</a></p>
+            </div>
+        </div>
+        
+        <!-- Second Half -->
+        
+        <div class="col-md-6  p-0 bg-lcyan h-md-100">
+            <div class="text-black h-100 p-5 text-center justify-content-center">
+                <ul id="nav" class="nav msize">
+                    <!--li class="touch-only"><a href="#nav">Close Subs</a></li-->
+                    <li><button class="first">Επιλογές Εργοδοτών</button>
+                      <ul id="open" class="next">
+                        <li><a class="centerized fs-2" href="#" style="pointer-events: none; background-color: white !important;">Δήλωση για...</a>
+                        <li><a class="centerized fs-2" href="#">Διακοπή λειτουργίας επιχείρησης</a>
+                          <!-- <ul>
+                            <li><a href="#">Δημόσιοι Υπάλληλοι</a></li>
+                            <li><a href="#">Ιδιωτικοί Υπάλληλοι</a></li>
+                            <li><a href="#">Ελεύθεροι Επαγγελματίες</a></li>
+                          </ul> -->
+                        </li>
+                        <li><a class="fs-2" href="#">Πρόσληψη εργαζομένων</a></li>
+                        <li><a class="fs-2" href="#">Απόλυση εργαζομένων</a></li>
+                        <li><a class="fs-2" href="#">Ααναστολή εργασίας</a></li>
+                      </ul>
+                  </ul>    
+            </div>
+        </div>      
+    </div>
+    <br>
+    <div class="centerize">
+        <a class="btn btn-outline-light scroll-link fs-3" href="#one">Νέα - Ανακοινώσεις για εργοδότες <i class="fas fa-arrow-down"></i></a>
+    </div>    
+</section>
+
+<section id="one">
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators">
+
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+
+        </ol>
+
+        <div class="carousel-inner">
+            <!-- data-bs-interval, that's for time per slide --> 
+            <div class="carousel-item active carh"> 
+                <div class="overlay-image" style="background-image:url(../imgs/anas.jpg);"></div>
+                <div class="container">
+                    <h1>Υποχρεώσεις εργοδοτών για το 2021.</h1>
+                    <p><b>Δηλώσεις αναστολών συμβάσεων και ορθών επαναλήψεων, κλειστές επιχειρήσεις, παράταση χρόνου υποβολής δηλώσεων κ.ά. </b></p>
+                    <a href="https://www.ergasiaka-gr.net/category/ypohreoseis-ergodoton/" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary">
+                        Δείτε Περισσότερα
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item carh">
+                <div class="overlay-image" style="background-image:url(../imgs/ergodotes2020.jpg);"></div>
+                <div class="container">
+                    <h1>Οι 10 καλύτεροι εργοδότες του 2020.</h1>
+                    <p><b>Οι 10 πιο επιτυχημένες ελληνικές επιχειρήσεις για το 2020 ύστερα από έρευνα του in.gr .</b></p>
+                    <a href="https://www.in.gr/2020/06/11/greece/ereyna-aytoi-einai-oi-10-kalyteroi-ergodotes-stin-ellada/" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary">
+                        Δείτε Περισσότερα
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item carh">
+                <div class="overlay-image" style="background-image:url(../imgs/money.jpg);"></div>
+                <div class="container">
+                    <h1>Νέο νομοσχέδιο: Κυρώσεις στους εργοδότες που παίρνουν την αποζημίωση ειδικού σκοπού από εργαζομένους.</h1>
+                    <p><b>Κυρώσεις θα επιβάλλονται σε εργοδότες που θα λαμβάνουν εν μέσω πανδημίας τα ποσά της αποζημίωσης ειδικού σκοπού από τους εργαζόμενους τους, όπως αναφέρεται σε σχετικό άρθρου του νέου νομοσχεδίου που κατατέθηκε στη Βουλή.</b></p>
+                    <a href="http://www.enikonomia.gr/economy/242144,neo-nomoschedio-kyroseis-stous-ergodotes-pou-pairnoun-tin-apozimi.html" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary">
+                        Δείτε Περισσότερα
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
+            <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-bs-slide="next">
+            <span class="sr-only">Previous</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</section>
+
+<script>
+    window.scrollTo(0,110)
+</script>

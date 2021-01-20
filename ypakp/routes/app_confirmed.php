@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 // echo "Hello world!";
 include('../views/header.html');
 

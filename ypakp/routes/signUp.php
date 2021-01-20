@@ -44,8 +44,8 @@ Password: <input type="password" name="pass"><br />
 
 <?php  
 
-include('../views/header.html');
 
+session_start();
 if(isset($_POST["submit"])){  
     
     if(!empty($_POST['user']) && !empty($_POST['pass'])) {  
@@ -53,8 +53,8 @@ if(isset($_POST["submit"])){
         $user=$_POST['user'];  
         $pass=$_POST['pass'];  
      
-        echo $user;
-        echo $pass;
+        // echo $user;
+        // echo $pass;
 
         $con = new mysqli('localhost','root','','ypakp');
         if ($con -> connect_errno){
@@ -66,12 +66,12 @@ if(isset($_POST["submit"])){
         $query = $con -> query("SELECT * FROM users WHERE username='".$user."'");
 
         if($query){
-            echo "hihi";
+            // echo "hihi";
         }
 
         $numrows = mysqli_num_rows($query);
         
-        echo $numrows;
+        // echo $numrows;
 
 
         if($numrows==0)  
@@ -97,6 +97,7 @@ if(isset($_POST["submit"])){
 
             if($result){  
                 echo "Account Successfully Created";  
+                $_SESSION['sess_user'] = $username;
                 header("location:index.php");
             
             } else {  
@@ -105,7 +106,10 @@ if(isset($_POST["submit"])){
     
         } else {  
         
-            echo "That username already exists! Please try again with another.";  
+            echo '<script language="javascript">';  
+            echo 'alert("That username already exists! Please try again with another")';
+            echo '</script>';
+            // echo "That username already exists! Please try again with another.";  
         }  
     
     } 
@@ -116,6 +120,7 @@ if(isset($_POST["submit"])){
 
 }  
 
+include('../views/header.html');
 include('../views/signUp.html');
 include('../views/footer.html');
 ?>  

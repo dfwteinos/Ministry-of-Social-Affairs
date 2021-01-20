@@ -61,7 +61,7 @@ if(isset($_POST["submit"])){
                                 
                     /* Redirect browser */  
                     // header("Location: index.php");
-                    header("location:appointment.php");  
+                    header("location:index.php");  
                 }  
             }
             
